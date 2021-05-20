@@ -1,3 +1,4 @@
+
 import tweepy
 
 #Add your credentials here
@@ -30,16 +31,17 @@ tweets
 #users_locs
 
 # Iterate and print tweets
-for tweet in tweets:
-    print(tweet.in_reply_to_status_id)
-    #print(tweet)
-tweetss = api.get_status("1395041849438519296")
+#for tweet in tweets:
+#print(tweet.in_reply_to_status_id)
+#print(tweet)
+#tweetss = api.get_status("1395041849438519296")
 #for tweet in tweetss:
-print(tweetss.text)
+#print(tweetss.text)
 
 
 
 #Make call on home timeline, print each tweets text
 #public_tweets = api.home_timeline()
-#for tweet in public_tweets:
+for tweet in tweets:
+    print(api.get_status(tweet.in_reply_to_status_id).text,"\n")
     #print(tweet.text)
