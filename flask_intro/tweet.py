@@ -3,10 +3,10 @@ import tweepy
 
 #Add your credentials here
 twitter_keys = {
-        'consumer_key':        'Vh6JtMJsrxBjflEj7oKZTCczF',
-        'consumer_secret':     'g14pxJdUTtFLd9j0xcWvAXTQxG5dOYh3wcVeqWiucX6b27FzAq',
-        'access_token_key':    '987311315214589952-aMGfX9OKVjbsxvyEdqfqDe6xB52d8ah',
-        'access_token_secret': 'gLJ24ZJjQP2t39VWuT0bz3YVg7GkAF2TIToqmjYBgPVsz'
+        'consumer_key':        'N2hwaNjoKuoFoYPgWsRh2JUMW',
+        'consumer_secret':     'LGK4qeeUY6XEQ0ZJxzz56iVHhv7ydP4OfEJqSo0gPIT3OU9HnT',
+        'access_token_key':    '1394666035379281922-5pohDKGgwd06PXtJ65pvIisAiSgDM8',
+        'access_token_secret': 'EKif76ASlPDNkqqweXFQENCn1En2hVOzggdMHEyQvbfWZ'
     }
 
 #Setup access to API
@@ -27,6 +27,9 @@ tweets = tweepy.Cursor(api.search,
               include_entities="false").items(5)
 tweets
 
+for tweet in tweets:
+    print(tweet.user.id)
+   # print(f"Liking tweet {tweet.id} of {tweet.author.name}")
 #users_locs = [['tweeetify'] for tweet in tweets]
 #users_locs
 
@@ -42,6 +45,19 @@ tweets
 
 #Make call on home timeline, print each tweets text
 #public_tweets = api.home_timeline()
-for tweet in tweets:
-    print(api.get_status(tweet.in_reply_to_status_id).text,"\n")
+#for tweet in tweets:
+    #print(api.get_status(tweet.in_reply_to_status_id).text,"\n")
     #print(tweet.text)
+#for tweet in tweets:
+    #print(api.get_status(tweet.in_reply_to_status_id).id,"\n")
+    
+#recipient_id = "2707179805"  # ID of the user
+#api.send_direct_message(recipient_id, "Hoi hoi")
+
+# fetching the user
+#user = api.get_user(id)
+  
+# fetching the screen name
+#screen_name = user.screen_name
+  
+#print("The screen name of the user is : " + screen_name)
