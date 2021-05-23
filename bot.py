@@ -30,4 +30,4 @@ class MyStreamListener(tweepy.StreamListener):
 myStreamListener = MyStreamListener()
 myStream = tweepy.Stream(auth = api.auth, listener=myStreamListener)
 
-myStream.filter(track=['@tweeetify'])
+myStream.filter(track=['@sendmett'])
