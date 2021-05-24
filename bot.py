@@ -1,20 +1,13 @@
 #!/usr/bin/env python
 # tweepy-bots/bots/followfollowers.py
-
 import tweepy
 import logging
 import time
-
-twitter_keys = {
-        'consumer_key':        'EARO09bbaUcj8J55sBl0PFXeJ',
-        'consumer_secret':     'WE1HdzsKqBAVk3Iy7cdRzWL9CzEiQiINj942RZPPFG51gqolK5',
-        'access_token_key':    '1395946530805141504-6vjPcNvIJ228yQLkJXvc0aYY0FkjW0',
-        'access_token_secret': '6Ci7yZpcxP7hXAOz5EDS8NQhi8pu493SQPrj1OLywnsOD'
-    }
+import config
 
 #Setup access to API
-auth = tweepy.OAuthHandler(twitter_keys['consumer_key'], twitter_keys['consumer_secret'])
-auth.set_access_token(twitter_keys['access_token_key'], twitter_keys['access_token_secret'])
+auth = tweepy.OAuthHandler(config.consumer_key, config.consumer_secret)
+auth.set_access_token(config.access_token_key, config.access_token_secret)
     
 api = tweepy.API(auth, wait_on_rate_limit=True, 
         wait_on_rate_limit_notify=True)
