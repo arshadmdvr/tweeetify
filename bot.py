@@ -1,6 +1,4 @@
 import tweepy
-import logging
-import time
 import os
 
 consumer_key=os.getenv('ck')
