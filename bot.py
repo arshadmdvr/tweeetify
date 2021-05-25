@@ -16,14 +16,17 @@ auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth, wait_on_rate_limit=True, 
         wait_on_rate_limit_notify=True)
 
-#print(consumer_key)
+
+ #.text
+
 #override tweepy.StreamListener to add logic to on_status
 class MyStreamListener(tweepy.StreamListener):
-
     def on_status(self, s):
-        api.send_direct_message(s.user.id,(api.get_status(s.in_reply_to_status_id)).user.name +" ("+ "@"+ s.in_reply_to_screen_name +") "+ "tweeted: "+ (api.get_status(s.in_reply_to_status_id)).text) 
-
+            content=api.get_status(s.in_reply_to_status_id,tweet_mode="extended")
+            api.send_direct_message(s.user.id,(api.get_status(s.in_reply_to_status_id)).user.name +" ("+ "@"+ s.in_reply_to_screen_name +") "+ "tweeted: "+ (content.full_text) )
+            
 myStreamListener = MyStreamListener()
+            
 myStream = tweepy.Stream(auth = api.auth, listener=myStreamListener)
 
-myStream.filter(track=['@sendmett'])
+myStream.filter(track=['@tweeetify'])
