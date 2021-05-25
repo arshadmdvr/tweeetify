@@ -21,7 +21,7 @@ api = tweepy.API(auth, wait_on_rate_limit=True,
 class MyStreamListener(tweepy.StreamListener):
 
     def on_status(self, s):
-        api.send_direct_message(s.user.id,(api.get_status(s.in_reply_to_status_id)).user.name +" ("+ "@"+ s.in_reply_to_screen_name +") "+ "tweeted: "+ (api.get_status(s.in_reply_to_status_id)).text) 
+        api.send_direct_message(s.user.id,(api.get_status(s.in_reply_to_status_id)).user.name +" ("+ "@"+ s.in_reply_to_screen_name +") "+ "tweeted: "+ (api.get_status(s.in_reply_to_status_id, tweet_mode="extended")).full_text) 
 
 myStreamListener = MyStreamListener()
 myStream = tweepy.Stream(auth = api.auth, listener=myStreamListener)
