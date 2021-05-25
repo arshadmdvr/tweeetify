@@ -16,6 +16,7 @@ tweepy - 3.10.0
 ## How to configure
 1. Get API keys from twitter by creating developer account on twitter
 2. Add your keys in the python code
-3. Implement required Changes
+3. Implement required Changes such as reply to whom or what etc
 ## How to Run
 1.Run the bot.py file
+2.Deploy in any servers like heroku to run the bot 24x7
