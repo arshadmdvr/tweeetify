@@ -7,7 +7,7 @@ This is a twitter bot which send you tweets as direct messages when you mention 
 ## Team Id
 BFH/recwBXVFBPGPlyEAE/2021
 ## Link to product walkthrough
-https://www.loom.com/share/f49f28a0799d4bffa9a6524494ff0190
+https://www.loom.com/share/9c4a5d030bb0487989d0428b72c13ca7
 ## How it Works ?
 1. Follow "Send Me This Tweet" bot (@sendmeTT) or enable messaging permissions for all in twitter
 2. Mention bot (reply @sendmeTT) below any tweet and you will get the tweet as DM.
