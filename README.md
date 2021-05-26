@@ -18,5 +18,5 @@ tweepy - 3.10.0
 2. Add your keys in the python code
 3. Implement required Changes such as reply to whom or what etc
 ## How to Run
-1.Run the bot.py file
-2.Deploy in any servers like heroku to run the bot 24x7
+1.Run the bot.py file.
+2.Deploy in any servers like heroku to run the bot 24x7.
